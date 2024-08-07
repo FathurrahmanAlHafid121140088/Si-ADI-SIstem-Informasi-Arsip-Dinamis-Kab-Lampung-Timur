@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap");
+
+/* Variable Replacements */
+:root {
+  --font-family-saira: "Saira Semi Condensed", sans-serif;
+  --transition-all: all 0.5s ease;
+  --primary-color: #2470b7;
+}
+
+* {
+  font-family: var(--font-family-saira);
+  transition: var(--transition-all);
+}
+
+.container-cari {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  flex-direction: column;
+}
+
+.cari {
+  width: 1200px; /* Adjust width as necessary */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 0 auto;
+  padding: 3rem;
+  border: 1rem;
+  border-color: var(--third-color);
+  background: linear-gradient(to left, var(--primary-color), #073763);
+  border-radius: 1rem;
+}
+
+form div,
+form label,
+form input,
+form textarea,
+form select {
+  width: 100%;
+}
+
+label {
+  font-weight: 600;
+}
+
+label,
+input,
+select,
+textarea {
+  padding: 8px;
+  border: 1rem;
+  border-color: var(--primary-color);
+}
+
+label,
+[placeholder] {
+  color: var(--third-color);
+}
+
+label i {
+  margin: 0 10px 0 0;
+}
+
+.field:focus-within label {
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+input,
+select,
+textarea {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0;
+}
+
+.btn-cari {
+  grid-column: 1 / -1; /* Makes the button span both columns */
+  margin-top: 2rem;
+  width: 3rem;
+}
+
+@media (max-width: 425px) {
+  .cari {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+}
+
+.search_box {
+  padding: 7rem;
+  width: 80%;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+}
+
+.search {
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 612px;
+  height: 54px;
+  background-color: white;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 38px 0px rgba(0, 0, 0, 0.1);
+}
+
+.select_area {
+  color: #4451fe;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+  font-weight: medium;
+}
+
+.text {
+  text-align: center;
+}
+
+.line {
+  border-left: 1px solid #d8d8d8;
+  height: 40px;
+}
+
+.search_text {
+  width: 100%;
+  border: none;
+  margin-left: 15px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  line-height: 24px;
+  font-weight: Regular;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #adb1b8;
+}
+
+.text_and-icon {
+  width: -410px;
+  display: flex;
+  align-items: center;
+}
+.search_icon {
+  color: #5e6573;
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out; /** Chrome & Safari **/
+  -moz-transition: all 0.6s ease-in-out; /** Firefox **/
+  -o-transition: all 0.6s ease-in-out; /** Opera **/
+}
+
+.search_text:focus {
+  outline: none !important;
+}
+
+.search_text:focus + .search_icon {
+  color: #4451fe;
+  transform: translate(55px, 0);
+  -webkit-transform: translate(55px, 0);
+  -o-transform: translate(55px, 0);
+  -moz-transform: translate(55px);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Adjust width as needed */
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-modal:hover {
+  text-decoration: none;
+}

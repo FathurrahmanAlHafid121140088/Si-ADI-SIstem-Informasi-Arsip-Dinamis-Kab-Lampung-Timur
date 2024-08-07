@@ -1,0 +1,137 @@
+.container-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 50px;
+}
+.screen {
+  background: linear-gradient(90deg, #073763, #2470b7);
+  position: relative;
+  height: 600px;
+  width: 400px;
+  box-shadow: 0px 0px 24px #2470b7;
+}
+
+.screen__content {
+  z-index: 1;
+  position: relative;
+  height: 100%;
+}
+
+.screen__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.screen__background__shape1 {
+  height: 32.5rem;
+  width: 32.5rem;
+  background: #fff;
+  top: -3.125rem;
+  right: 7.5rem;
+  border-radius: 0 4.5rem 0 0;
+}
+
+.screen__background__shape2 {
+  height: 13.75rem;
+  width: 13.75rem;
+  background: var(--primary-color);
+  top: -43rem;
+  right: 0;
+  border-radius: 2rem;
+}
+
+.screen__background__shape3 {
+  height: 33.75rem;
+  width: 11.875rem;
+  background: linear-gradient(270deg, #c69815, #eebf3e);
+  top: -1.5rem;
+  right: 0;
+  border-radius: 2rem;
+}
+
+.screen__background__shape4 {
+  height: 25rem;
+  width: 12.5rem;
+  background: #2470b7;
+  top: 26.25rem;
+  right: 3.125rem;
+  border-radius: 3.75rem;
+}
+
+.login {
+  padding: 30px;
+}
+
+.login__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.login__field {
+  padding: 20px 0px;
+  position: relative;
+}
+
+.login__icon {
+  position: absolute;
+  top: 30px;
+  color: var(--primary-color);
+}
+
+.login__input {
+  border: none;
+  border-bottom: 2px solid var(--primary-color);
+  background: none;
+  padding: 10px;
+  padding-left: 24px;
+  font-weight: 700;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+  outline: none;
+  border-bottom-color: var(--third-color);
+}
+
+.login__submit {
+  font-size: 14px;
+  margin-top: 30px;
+  padding: 16px 20px;
+  border-radius: 26px;
+  border: 1px solid var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--primary-color);
+  box-shadow: 0px 2px 2px var(--primary-color);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+  border-color: var(--primary-color);
+  outline: none;
+}
